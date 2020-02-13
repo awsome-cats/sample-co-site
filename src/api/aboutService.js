@@ -1,0 +1,22 @@
+export default[
+   {
+      id:1,
+      svg:require('@/assets/svg/about-coding.svg'),
+      title:'Webサービス開発'
+   },
+   {
+      id:2,
+      svg:require('@/assets/svg/aboutwebservice.svg'),
+      title:'オリジナルサービス開発'
+   },
+   {
+      id:3,
+      svg:require('@/assets/svg/about-report.svg'),
+      title:'AIサービス開発'
+   },
+   {
+      id:4,
+      svg:require('@/assets/svg/about-photoshop.svg'),
+      title:'デザイン'
+   }
+]
