@@ -185,8 +185,7 @@ export default {
          totalsteps:4,
          errors: [],
          form: {
-            firstName:'',
-            lastName:'',
+            name:'',
             age: 0,
             email: '',
             message: ''
@@ -196,7 +195,7 @@ export default {
    methods: {
       nextStep() {
          if (this.step == 1) {
-            if(!this.form.firstName && !this.form.lastName) {
+            if(!this.form.name) {
                this.errors = '名前を入力してください .'
                return false
             } 
