@@ -27,23 +27,34 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+   *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+   }
    .header-content {
-      background:#fff;
-      margin-bottom: 5vh;
-      padding-top:2vh;
-      padding-bottom:10px;
-      width:94%;
+      
+      padding-bottom: 30px;
+      padding-top:110px;
+      
+      width:100%;
+      height:auto;
+      max-width:1300px;
+      margin:0 auto;
    }
 
    .camp-body {
       width:100%;
+      height:auto;
       margin:0 auto;
-      background:white;
+      background:#fff;
       display:grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
       align-items: center;
+      align-content: center;
    }
 
    .briefing-box {
@@ -51,8 +62,6 @@ export default {
       grid-row: 1/2;
       position: relative;
       width:100%;
-     
-      
    }
 
    .briefing-box a {
@@ -67,7 +76,7 @@ export default {
    .header-visual-bg {
       grid-column: 2/3;
       grid-row: 1/2;
-      width:110%;
+      width:100%;
       text-align: center;
    }
 
@@ -77,10 +86,34 @@ export default {
       left:10%;
       transform: translate(10%, -70%);
       background:rgb(255, 27, 11);
-      height:50px;
+      height:auto;
       width:70%;
       border-radius: 33px;
       padding:10px;
    }
-
+   
+   @media screen and (max-width:500px) {
+      .header-content {
+         padding-top:10px;
+         padding-bottom:20px;
+         .briefing-box {
+            padding-top:30px;
+         }
+      }
+      // .header-visual-bg {
+      //    width:100%;
+      // }
+      // .briefing-box {
+      //    width:100%;
+      //    p {
+      //       font-size:.7rem;
+      //       top:-20%;
+      //       left:10%;
+      //       transform: translate(10%, -20%);
+            
+      //    }
+      // }
+      
+      
+   } 
 </style>

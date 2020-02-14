@@ -30,7 +30,7 @@
                   <input v-model="form.firstname" 
                   class="form-control" 
                   type="text" 
-                  placeholder="姓を入力して下さい" >
+                  placeholder="姓を入力して下さい">
                </div>
                   
                <div class="form-group col-md-6">

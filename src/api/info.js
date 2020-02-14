@@ -11,7 +11,7 @@ export default[
       id:2,
       title:'研修',
       catchCopy: '組織をテクノロジーにあった最適な組織へサポートします',
-      image: require('@/assets/svg/svg-company-demo-img-sample02.svg'),
+      image: require('@/assets/svg/svg-hs01.svg'),
       linkMessage:'詳細はこちら',
       path:'/training'
    }

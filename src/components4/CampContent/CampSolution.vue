@@ -6,12 +6,13 @@
          <!--svg 画像-->
          <div class="svg-wrapp">
             <img :src="item.campSectionContent.svgTextSvg1" alt="">
-         </div>
-         <div class="svg-wrapp">
+         
+         
             <img :src="item.campSectionContent.svgTextSvg2" alt="">
-         </div>
-         <div class="svg-wrapp">
+        
+         
             <img :src="item.campSectionContent.svgTextSvg3" alt="">  
+        
          </div>
       </div>
       <div>
@@ -33,6 +34,7 @@ export default {
 .camp-description {
    width:100%;
    background:#fff;
+   border-top:1px solid #ccc;
 }
 
 h1 {
@@ -55,17 +57,40 @@ h2 span {
 }
 
 .image {
+   width:100%;
    display:flex;
    justify-content: center;
+   margin:30px 0px;
 }
 
 .image .svg-wrapp {
-   margin-left:20px;
+   width:100%;
+   /* background:chartreuse; */
+   display:flex;
+   justify-content: center;
+   
 }
 
 .image img{
-   width:150px;
-   margin:5px;
+   width:200px;
+   margin:0 10px;
+}
+
+@media screen and (max-width:500px) {
+   .image {
+      flex-direction: column;
+      align-items: center;
+   }
+   .svg-wrapp {
+      margin:0 10px;
+   }
+
+   h2 {
+      font-size:1.3rem;
+   }
+   h2 span {
+      font-size:1.3rem;
+   }
 }
 
 

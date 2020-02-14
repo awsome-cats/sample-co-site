@@ -1,7 +1,7 @@
 <template>
 <div>
     <section class="briefing-card">
-        <div class="container">
+        <div class="wrapper">
             <div class="img">
                 <h1 class="briefing-card-title">迷った方はまず説明会や体験会へ</h1>
                 <p class="briefing-catch-copy">〇〇ではプログラミングやキャリアについて無料で学べる説明会・体験会を開催しております。<br>自身の人材価値を高めたい、新しいキャリアを目指したい方はご気軽にご参加下さい</p>
@@ -29,11 +29,12 @@ export default {
 .briefing-card {
     padding-top:50px;
     padding-bottom:50px;
-    height:380px;
+    width:100%;
+    height:auto;
     margin-bottom:70px;
 }
 
-.container {
+.wrapper {
     position: relative;
 }
 
@@ -72,13 +73,13 @@ export default {
     transition-duration:.5s;
 }
 
- .container .img:hover button.briefing-btn {
+ .wrapper .img:hover button.briefing-btn {
     background:rgb(247, 88, 77);
     border:none;
     transition:.3s ease-in;
 } 
 
- .container .img:hover button.briefing-btn span.btn {
+ .wrapper .img:hover button.briefing-btn span.btn {
     color:whitesmoke;
     transition:.2s ease-in;
 } 
@@ -91,7 +92,7 @@ export default {
     transition-duration:.2s ease-in;
 }
 
-.container .img{
+.wrapper .img{
     /* height:380px; */
     height:380px;
     width:100%;

@@ -43,10 +43,10 @@
       </div>
    </header>
    
-   <div class="space" style="height: 500px; background:#ccc;">
+   <!-- <div class="space" style="height: 500px; background:#ccc;">
      <p style="text-align:center; font-size:3rem; padding-top:100px;">width:{{width}}</p>
      <p style="text-align:center; font-size:3rem; padding-top:100px;">Height:{{height}}</p>
-   </div>
+   </div> -->
     <router-view></router-view>
   </div>
 </template>
@@ -110,17 +110,21 @@ html {
    padding:25px 0;
    background:rgb(253, 250, 250);
    margin:0 auto;
+   height:80px;
 }
 
 .h_logo {
    float:left;
    font-weight: bold;
    font-size:1rem;
+   padding-left:10px;
+   margin-top:10px;
 }
 
 .h_logo a {
    color:#000;
    text-decoration: none;
+   font-size:1.4rem;
 }
 
 .g_nav {

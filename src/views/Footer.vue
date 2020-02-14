@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer-section">
    <div class="wrapper">
      <p>〇〇へのご質問・ご不明点がありましたらFAQをご確認の上、運営事務局までお問い合わせ下さい。<br>メール:info@〇〇.com</p>
      <p>※通常ご連絡下頂いた後二日頂いております。<br>現在、お電話でのお問い合わせ窓口はございません。</p>
@@ -17,13 +17,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer {
+.footer-section {
   width:100%;
-  height:100%;
+  height:auto;
   padding:15px;
   .wrapper {
-    width: 800px;
-    height: 120px;
+    max-width: 800px;
+    width:100%;
+    height: auto;
     margin:0 auto;
     padding-top:20px;
     padding-left:20px;
@@ -42,16 +43,15 @@ export default {
 
 
 @media screen and (max-width:1024px) {
-  footer.footer {
-    width:90%;
+  footer.footer-section {
     margin:0 auto;
   }
 }
 
 
 @media screen and (max-width:768px) {
-  footer.footer .wrapper{
-    width:90%;
+  footer.footer-section .wrapper{
+   
     padding:20px 10px;
    
     
@@ -62,8 +62,7 @@ export default {
 }
 
 @media screen and (max-width:414px) {
-  footer.footer .wrapper {
-    width:90%;
+  footer.footer-section .wrapper {
     background:#ccc;
     p {
       width:100%;

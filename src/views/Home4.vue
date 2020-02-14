@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .section-meet-up {
-   padding-top:50px;
+   padding-top:150px;
    padding-bottom:50px;
 }
 
@@ -57,8 +57,11 @@ export default {
    padding:1em;
    border:1px solid #aaa;
    grid-gap:1em;
+   width:100%;
    max-width:1280px;
    margin:auto;
+   
+   
 }
 
 .meet-up2 > div {

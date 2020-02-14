@@ -58,6 +58,8 @@
                <!---svg---->
             </div>
          </section>
+         
+         
          <!----価値のサポートの具体性--->
          <!---環境----->
          <section class="support">
@@ -70,6 +72,8 @@
                </div>
             </div>
          </section>
+         
+         
          
          <!---受講生の声---->
          <section class="feedback">
@@ -135,7 +139,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 *{
    margin:0;
    padding:0;
@@ -144,25 +148,35 @@ export default {
 
 .offer {
    background:#fff;
+   margin-top:60px;
 }
 
 .offer-container {
    width:100%;
+   height:auto;
 }
 
 .offer-container h2,
 .offer-merit h2,
 .learning-content-headline h2,
+.learning-content-title h3,
 .personal-menter-title h2 {
-   /* padding-left:20px; */
    font-size:2rem;
-   width:95%;
+   width:100%;
+   /* background:cornflowerblue; */
+   padding-left:25px;
 }
 
-.offer-container h2 {
-   border-top:1px solid #ccc;
-   padding-top:30px;
+.offer .offer-container p,
+.offer-merit p,
+.learning-line-up p,
+.learning-content-title p,
+.personal-menter p{
+   //background:darkcyan;
+   padding-left:25px;
+   width:100%;
 }
+
 
 .offer-container p {
    font-size:1rem;
@@ -232,6 +246,31 @@ export default {
    margin:10px;
 }
 
+// offer section media query
+@media screen and (max-width: 500px) {
+   .offer-merit-card-one {
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows:1fr 1fr;
+      .offer-card-title {
+         grid-column:1/2;
+         grid-row:1/2;
+         h3 {
+            padding-top:20px;
+            font-size:1.6rem;
+            font-weight:500;
+         }
+         p {
+            padding-top:0px;
+         }
+      }
+      .offer-merit-image {
+         grid-column: 1/2;
+         grid-row:2/3;
+      }
+   }
+}
+
 
 /* Learnnig Content */
 
@@ -242,7 +281,7 @@ export default {
 
 .learning-content-headline h3,
 .learning-content-headline p {
-   width:90%;
+   width:100%;
 }
 
 .learning-content-title h3 {
@@ -254,12 +293,12 @@ export default {
    justify-content: space-around;
    margin:0 auto;
    margin-bottom:50px;
-   width:90%;
+   width:100%;
 }
 
 .learning-content > div {
    /* width:100%; */
-   height:300px;
+   height:auto;
    box-shadow:3px 3px 7px 2px rgb(240, 239, 239);
    text-align: center;
    align-content: center;
@@ -283,25 +322,39 @@ export default {
    padding:0;
 }
 
+// learning media query
+@media screen and (max-width:500px) {
+   .learning-content {
+      max-width:500px;
+      background:darkgoldenrod;
+      img {
+         max-width:120px;
+      }
+   }
+}
+
 /* 価値のサポート */
 .personal-menter {
    width:100%;
    box-sizing: border-box;
+   // background:chartreuse;
+   margin-bottom:100px;
 }
 
 .personal-menter-title h2,
 .personal-menter-title p  {
-   width:90%;
+   width:100%;
 }
 
 .personal-menter-title p {
    font-size:1.6rem;
-   font-weight:600;
+   font-weight:500;
+   margin-bottom:60px;
 }
 
 .personal-menter-title p span {
    font-size:1.6rem;
-   color:red;
+   color:rgb(226, 71, 71);
    font-weight:600;
 }
 
@@ -313,17 +366,38 @@ export default {
    background-position:center;
 }
 
+@media screen and (max-width:500px) {
+   .personal-menter {
+      margin-bottom:30px;
+      .personal-menter-title p {
+      font-size: 1.3rem;
+      span {
+         font-size:1.3rem;
+      }
+   }
+   }
+   
+}
+
 /* support section*/
 .support {
    width:100%;
+   height:auto;
    margin:0 auto;
+   h2 {
+      margin-bottom:30px;
+   }
 }
+
+
 
 .teaching-material
 {
    /* margin-bottom:50px; */
-   display:flex;
-   justify-content: flex-start;
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+   justify-content: center;
    align-items: center;
    align-content: center;
    border:1px solid #ccc;
@@ -332,33 +406,35 @@ export default {
    height:100%;
    margin:0 auto;
    margin-bottom:40px;
+   background:#fff;
 }
 
-.teaching-material h3,
-.dev-support h3,
-.support-menter h3 {
+.teaching-material h3{
    font-size:1.6rem;
    margin:20px;
 }
 
-.teaching-material p,
-.dev-support p,
-.support-menter p {
+.teaching-material p
+
+ {
    font-size:1rem;
    padding:10px 20px;
   
 }
 
-.teaching-material div,
-.dev-support div,
-.support-menter div {
-    width:50%;
-    padding:10px;
+.teaching-material div
+{
+    width:90%;
+    grid-column: 2/3;
+    grid-row:1/2;
+    
 }
 
 .teaching-material img {
-    padding:15px;
-    height:450px;
+   padding:15px;
+   width:100%;
+   height:auto;
+   max-height:350px;
 }
 
 
@@ -370,16 +446,64 @@ export default {
   
 }
 
+// support media query
 
-.feedback h2,
-.feedback p,
-.feedback h3 {
-   margin-left:20px;
+@media screen and (max-width:500px) {
+   .support h2 {
+      text-align: center;
+      margin-top:0px;
+   }
+   .teaching-material {
+     grid-template-columns: 1fr;
+     grid-template-rows: 1fr 1fr;
+     div {
+        grid-column: 1/2;
+        grid-row: 2/3;
+     }
+     img {
+        grid-row: 1/2;
+        grid-column: 1/2;
+     }
+   } 
 }
 
-.feedback h3 {
-   font-size:1.4rem;
-   color:rgb(153, 150, 150);
+
+.feedback {
+   width:100%;
+   p {
+      word-break: break-all;
+      width:100%;
+   }
+   h3 {
+      margin:20px;
+      font-size:1.7rem;
+      color:rgb(153, 150, 150);
+   }
+}
+
+// feedback media query
+
+@media screen and (max-width:500px) {
+   .feedback {
+      p {
+         font-size:1.2rem;
+      }
+      h3 {
+         font-size:1.4rem;
+         text-align: center;
+      }
+   }
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+   .offer-container h2{
+      font-size:1.5rem;
+      width:90%;
+      text-align:center;
+   }
 }
 
 
