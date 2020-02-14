@@ -51,10 +51,23 @@
             </div>
          </section>
             <!----  step1 Ghost  End---->
-      
-         <section v-if="step == 2">
+
+         <section v-if="step == 2" >
+               <div class="text-center step">
+                     <h3 >Step2</h3>
+                  </div>
+               <div class="form-group">
+               <label>年齢を入力してください</label>
+               <input 
+               v-model="form.age"
+               class="form-control" 
+               type="number" placeholder="年齢を入力して下さい">
+            </div>
+         </section>
+
+         <section v-if="step == 3">
             <div class="text-center step">
-               <h3 >Step2</h3>
+               <h3 >Step3</h3>
             </div>
             <input 
             v-model="form.email" 
@@ -66,7 +79,7 @@
          </section>
 
          <section 
-         v-if="step == 3"
+         v-if="step == 4"
          >
             <div class="text-center step">
                <h3 >Step4</h3>
@@ -103,7 +116,7 @@
 
          <div class="text-center">
             <input 
-            v-if="step == 3"
+            v-if="step == 4"
             type="submit"
             class="btn btn-success w-50"
             >
@@ -119,10 +132,11 @@ export default {
    data() {
       return {
          step:1,
-         totalsteps:3,
+         totalsteps:4,
          errors: [],
          form: {
             name:'',
+            age: 0,
             email: '',
             message: ''
          }
@@ -139,6 +153,13 @@ export default {
          }
 
          if (this.step == 2) {
+            if(!this.form.age) {
+               this.errors = '年齢を入力してください .'
+               return false
+            }
+         }
+
+         if (this.step == 3) {
             if(!this.form.email) {
                this.errors = 'emailを入力してください .'
                return false
@@ -155,7 +176,7 @@ export default {
          .join('&')
       },
       sendForm() {
-         if (this.step == 3) {
+         if (this.step == 4) {
             if(!this.form.message) {
                this.errors = 'messageを入力してください .'
                
