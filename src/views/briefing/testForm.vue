@@ -22,7 +22,7 @@
       
          <section v-if="step == 1">
             <div class="form-row">
-               <div class="text-center step-title">
+               <div class="text-center">
                   <h3>Step1</h3>
                </div>
                <div class="form-group col-md-6">
@@ -192,7 +192,6 @@ export default {
             message: ''
          }
       }
-      
    },
    methods: {
       nextStep() {
