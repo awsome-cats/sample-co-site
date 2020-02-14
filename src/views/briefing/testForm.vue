@@ -22,7 +22,7 @@
       
          <section v-if="step == 1">
             <div class="form-row">
-               <div class="text-center step">
+               <div class="text-center step-title">
                   <h3>Step1</h3>
                </div>
                <div class="form-group col-md-6">
@@ -116,7 +116,6 @@
 
             <!----  step3 Ghost  Start ---->
             <div class="form-group text-center grayscale-step mb-3 mt-3">
-               
                <div class="text-center">
                   <h3 >Step4</h3>
                </div>
@@ -258,11 +257,10 @@ export default {
 .card {
    border: 3px solid #ccc;
 }
-.step {
-   width:500px;
-   height:80px;
+.step-title {
+   width:100%;
    color:rgb(221, 87, 87);
-   margin:0 auto;
+   /* margin-bottom:300px; */
 }
 
 .grayscale-step {
