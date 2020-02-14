@@ -186,10 +186,8 @@ export default {
                   "form-name": "contact",
                   ...this.form
                }), axiosConfig)
-               // eslint-disable-next-line no-console
-               .then(() => console.log('success'))
-               // eslint-disable-next-line no-console
-               .catch((e) => console.error(e))
+               .then(() => this.$router.push({path: 'success'}))
+               .catch(() => this.$router.push({ path: 'fail'}))
             }
       }
          //this.errors = ''

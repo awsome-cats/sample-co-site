@@ -14,6 +14,8 @@ import TestPara from './views/TestPara.vue'
 import Recruite from './components4/Recruite.vue'
 import Training from './components4/ Training.vue'
 import MainBrifing from './views/briefing/MainBriefing.vue'
+import SubmissionSuccess from '@/views/briefing/SubmissionSuccess'
+import SubmissionFail from '@/views/briefing/SubmissionFail'
 
 
 
@@ -84,6 +86,16 @@ export default new Router({
     path:'/briefing-main',
     name:'MainBriefing',
     component:MainBrifing
+  },
+  {
+    path:'/success',
+    name:'SubmissionSuccess',
+    component: SubmissionSuccess
+  },
+  {
+    path: '/fail',
+    name:'SubmissionFail',
+    component:SubmissionFail
   }
 
    ]
