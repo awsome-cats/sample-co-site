@@ -1,20 +1,30 @@
 <template>
    <div class="card container">
       <div class="card-body">
-         <form name="contact" method="POST" @submit.prevent="submitForm" data-netlify="true" netlify-honeypot="bot-field">
+         <form name="contact" 
+         method="POST" 
+         @submit.prevent="submitForm" 
+         data-netlify="true" 
+         netlify-honeypot="bot-field">
             <p class="hidden" style="display:none;">
                <label>Don't fill this out if you're human:
                   <input name="bot-field"/>
                </label>
             </p>
+            
             <!---Error handling----->
-            <span v-for="e in errors" :key="e" class="text-danger">{{e}}</span>
+            <span 
+            v-for="e in errors" 
+            :key="e" 
+            class="text-danger"
+            >{{e}}</span>
             
             <section v-if="step == 1">
                <div class="form-row">
                   <div class="text-center step">
                      <h3 >Step1</h3>
                   </div>
+                  
                   <div class="form-group col-md-6">
                      <label>姓</label>
                      <input v-model="form.firstName" class="form-control" type="text" placeholder="姓を入力して下さい" >

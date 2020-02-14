@@ -8,7 +8,11 @@
          @submit.prevent="sendForm"
       >
       
-      <span v-for="e in errors" :key="e">{{e}}</span>
+      <span 
+      v-for="e in errors" 
+      :key="e"
+      class="text-danger"
+      >{{e}}</span>
       
       <p class="hidden" style="display:none;">
         <label>Don't fill this out if you're human:
@@ -16,10 +20,19 @@
         </label>
       </p>
       
-      <section v-if="step == 1">
-         <h3>Step1</h3>
-         <input v-model="form.name" type="text" name="name" id="" placeholder="name...">
+      <section 
+         v-if="step == 1"
+         class="form-row"
+         >
+         <div class="text-center step">
+            <h3>Step1</h3>
+         </div>
+         <div class="form-group col-md-6">
+            <label>姓</label>
+            <input v-model="form.name" type="text" name="name" id="" placeholder="name...">
+         </div>  
       </section>
+      
       <section v-if="step == 2">
           <h3>Step2</h3>
           <input v-model="form.email" type="email" name="email" id="" placeholder="email address...">
@@ -29,6 +42,7 @@
           <h3>Step3</h3>
           <textarea v-model="form.message" name="message" id="" cols="30" rows="10" placeholder="message..."></textarea>
       </section>
+      
       <button 
       v-if="step != totalsteps"
       @click.prevent="nextStep"
@@ -120,5 +134,12 @@ export default {
 </script>
 
 <style scoped>
+
+.step {
+   width:500px;
+   height:80px;
+   color:rgb(221, 87, 87);
+   margin:0 auto;
+}
 
 </style>
