@@ -16,8 +16,47 @@
       <strong>We're sorry but vue-scroll doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
 
-    
-    <form name="contact" method="POST" @submit.prevent="submitForm" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <!-----  test form -->
+
+    <form
+    name="contact"
+    method="POST"
+    netlify-honeypot="bot-field"
+    data-netlify="true"
+    hidden
+  >
+    <p class="hidden">
+      <label>Don't fill this out if you're human:
+        <input name="bot-field"/>
+      </label>
+    </p>
+    <p>
+      <label>Email:
+        <input name="email" type="text"
+        />
+      </label>
+    </p>
+    <p>
+      <label>name:
+        <input name="name" type="text"
+        />
+      </label>
+    </p>
+    <p>
+      <label>message:
+        <input name="message" type="text"
+        />
+      </label>
+    </p>
+    <div class="field">
+      <div data-netlify-recaptcha="true"></div>
+    </div>
+    <button type="submit">Send</button>
+  </form
+  >
+
+    <!----- form ----->
+    <!-- <form name="contact" method="POST" @submit.prevent="submitForm" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <p class="hidden">
         <label>Don't fill this out if you're human:
           <input name="bot-field"/>
@@ -53,14 +92,14 @@
             type="email" placeholder="emailを入力して下さい" 
             >
          </div>
-         <!-- <div class="form-group">
+          <div class="form-group">
             <label>メールアドレス(確認用)</label>
             <input 
             v-model="form.repeatEmail"
             class="form-control" 
             type="email" placeholder="emailを入力して下さい" 
             >
-         </div> -->
+         </div> 
       </section>
 
       <section v-if="step == 4">
@@ -95,7 +134,7 @@
       <div class="text-center">
          <button v-if="step == 4" type="submit" class="btn btn-success w-50">送信</button>
       </div>
-   </form>
+   </form> -->
 
 
 

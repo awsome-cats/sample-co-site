@@ -26,7 +26,7 @@
            </div>
       </div>
       <h2 style="text-align:center; margin:35px;">体験会の申し込み</h2>
-     <BriefingForm/>
+     <testForm/>
    </div>
 </template>
 
@@ -35,9 +35,9 @@
 import briefingFlow from '@/api/briefing-flow.js'
 
 // component
-import BriefingForm from '@/views/briefing/BriefingForm'
+import testForm from '@/views/briefing/testForm'
 export default {
-   components:{BriefingForm},
+   components:{testForm},
    data() {
       return {
          briefingFlow
