@@ -70,7 +70,7 @@
             <section v-if="step == 3">
                <div class="text-center step">
                      <h3 >Step3</h3>
-                  </div>
+               </div>
                <div class="form-group">
                   <label>Email</label>
                   <input v-model="form.email" class="form-control" 

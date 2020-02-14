@@ -27,15 +27,40 @@
          <div class="text-center step">
             <h3>Step1</h3>
          </div>
-         <div class="form-group col-md-6">
-            <label>姓</label>
-            <input v-model="form.name" type="text" name="name" id="" placeholder="name...">
-         </div>  
+         <div class="form-group col-md-12">
+            <label>お名前</label>
+            <input 
+            v-model="form.name" 
+            type="text" 
+            name="name" 
+            id="name" 
+            placeholder="name..."
+            class="form-control"
+            >
+         </div>
+         <!----  step1 Ghost  Start---->
+         <div class="form-group text-center grayscale-step">
+            <div class="text-center">
+               <h3 >Step2</h3>
+            </div>
+            <div class="form-group">
+               <p style="font-size:1.8rem;">Emailを入力して下さい</p>
+            </div>
+         </div>
       </section>
+         <!----  step1 Ghost  End---->
       
       <section v-if="step == 2">
-          <h3>Step2</h3>
-          <input v-model="form.email" type="email" name="email" id="" placeholder="email address...">
+         <div class="text-center step">
+            <h3 >Step2</h3>
+         </div>
+          <input 
+          v-model="form.email" 
+          type="email" name="email" 
+          id="email" 
+          placeholder="email address..."
+          class="form-control"
+          >
       </section>
 
       <section v-if="step == 3">
@@ -140,6 +165,15 @@ export default {
    height:80px;
    color:rgb(221, 87, 87);
    margin:0 auto;
+}
+
+.grayscale-step {
+   width:500px;
+   height:150px;
+   color:rgb(156, 153, 153);
+   margin:0 auto;
+   margin-bottom:20px;
+   margin-top:20px;
 }
 
 </style>
