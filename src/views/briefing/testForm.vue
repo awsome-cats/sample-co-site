@@ -27,20 +27,20 @@
                </div>
                <div class="form-group col-md-6">
                   <label>姓</label>
-                  <input v-model="form.firstName" 
+                  <input v-model="form.name" 
                   class="form-control" 
                   type="text" 
                   placeholder="姓を入力して下さい" >
                </div>
                   
-               <div class="form-group col-md-6">
+               <!-- <div class="form-group col-md-6">
                   <label>名</label>
                   <input v-model="form.lastName" 
                   class="form-control" 
                   type="text" 
                   placeholder="名を入力して下さい"
                   >
-               </div>
+               </div> -->
             </div>
             
             <!----  step1 Ghost  Start---->
