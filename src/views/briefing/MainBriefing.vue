@@ -25,7 +25,9 @@
             </div>
            </div>
       </div>
-      <h2 style="text-align:center; margin:35px;">体験会の申し込み</h2>
+      <h2 style="text-align:center; margin:35px;">\ 体験会の申し込み /</h2>
+      <h3 class="text-center">入力が終えるまで10秒</h3>
+      <p class="text-center">プログラミングの世界へ一歩を踏み出す</p>
      <testForm/>
    </div>
 </template>

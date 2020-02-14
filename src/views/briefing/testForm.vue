@@ -20,28 +20,43 @@
          </label>
          </p>
       
-         <section 
-            v-if="step == 1"
-            class="form-row"
-            >
-            <div class="text-center step">
-               <h3>Step1</h3>
+         <section v-if="step == 1">
+            <div class="form-row">
+               <div class="text-center step">
+                  <h3>Step1</h3>
+               </div>
+               <div class="form-group col-md-6">
+                  <label>姓</label>
+                  <input v-model="form.firstName" 
+                  class="form-control" 
+                  type="text" 
+                  placeholder="姓を入力して下さい" >
+               </div>
+                  
+               <div class="form-group col-md-6">
+                  <label>名</label>
+                  <input v-model="form.lastName" 
+                  class="form-control" 
+                  type="text" 
+                  placeholder="名を入力して下さい"
+                  >
+               </div>
             </div>
-            <div class="form-group col-md-12">
-               <label>お名前</label>
-               <input 
-               v-model="form.name" 
-               type="text" 
-               name="name" 
-               id="name" 
-               placeholder="name..."
-               class="form-control"
-               >
-            </div>
+            
             <!----  step1 Ghost  Start---->
-            <div class="form-group text-center grayscale-step">
+            <div class="form-group text-center grayscale-step 
+            mb-5 mt-3">
                <div class="text-center">
                   <h3 >Step2</h3>
+               </div>
+               <div class="form-group">
+                  <p style="font-size:1.8rem;">
+                     年齢を入力して下さい
+                  </p>
+               </div>
+
+               <div class="text-center">
+                  <h3 >Step3</h3>
                </div>
                <div class="form-group">
                   <p style="font-size:1.8rem;">
@@ -53,16 +68,38 @@
             <!----  step1 Ghost  End---->
 
          <section v-if="step == 2" >
-               <div class="text-center step">
-                     <h3 >Step2</h3>
-                  </div>
-               <div class="form-group">
+            <div class="text-center step">
+                  <h3 >Step2</h3>
+            </div>
+            <div class="form-group">
                <label>年齢を入力してください</label>
                <input 
                v-model="form.age"
                class="form-control" 
                type="number" placeholder="年齢を入力して下さい">
             </div>
+            <!----  step2 Ghost  Start ---->
+            <div class="form-group text-center grayscale-step mb-5 mt-3">
+               <div class="text-center">
+                  <h3 >Step3</h3>
+               </div>
+               <div class="form-group">
+                  <p style="font-size:1.8rem;">
+                     Emailを入力して下さい
+                  </p>
+               </div>
+
+               <div class="text-center">
+                  <h3 >Step4</h3>
+               </div>
+               <div class="form-group">
+                  <p style="font-size:1.8rem;">
+                     メッセージを入力して下さい
+                  </p>
+               </div>
+            </div>
+            <!----  step2 Ghost  End ---->
+
          </section>
 
          <section v-if="step == 3">
@@ -76,20 +113,34 @@
             placeholder="email address..."
             class="form-control"
             >
+
+            <!----  step3 Ghost  Start ---->
+            <div class="form-group text-center grayscale-step mb-3 mt-3">
+               
+               <div class="text-center">
+                  <h3 >Step4</h3>
+               </div>
+               <div class="form-group">
+                  <p style="font-size:1.8rem;">
+                     メッセージを入力して下さい
+                  </p>
+               </div>
+            </div>
+            <!----  step3 Ghost  End ---->
          </section>
 
          <section 
          v-if="step == 4"
          >
             <div class="text-center step">
-               <h3 >Step4</h3>
+               <h3>Step4</h3>
             </div>
             <textarea 
             v-model="form.message" 
             name="message" id="message" 
             cols="30" rows="10" 
             placeholder="message..."
-            class="form-control" 
+            class="form-control mb-5" 
             >
             </textarea>
          </section>
@@ -118,7 +169,7 @@
             <input 
             v-if="step == 4"
             type="submit"
-            class="btn btn-success w-50"
+            class="btn btn-success w-50 mt-3"
             >
          </div>
       </form>
@@ -135,7 +186,8 @@ export default {
          totalsteps:4,
          errors: [],
          form: {
-            name:'',
+            firstName:'',
+            lastName:'',
             age: 0,
             email: '',
             message: ''
@@ -146,7 +198,7 @@ export default {
    methods: {
       nextStep() {
          if (this.step == 1) {
-            if(!this.form.name) {
+            if(!this.form.firstName && !this.form.lastName) {
                this.errors = '名前を入力してください .'
                return false
             } 
@@ -203,6 +255,9 @@ export default {
 
 <style scoped>
 
+.card {
+   border: 3px solid #ccc;
+}
 .step {
    width:500px;
    height:80px;
@@ -215,8 +270,6 @@ export default {
    height:150px;
    color:rgb(156, 153, 153);
    margin:0 auto;
-   margin-bottom:20px;
-   margin-top:20px;
 }
 
 </style>
