@@ -191,9 +191,9 @@ export default {
                // eslint-disable-next-line no-console
                .catch((e) => console.error(e))
             }
-         }
-         this.errors = ''
-         this.form = ''
+      }
+         //this.errors = ''
+         // this.form = ''
       }
    }
 }

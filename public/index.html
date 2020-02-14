@@ -16,6 +16,7 @@
       <strong>We're sorry but vue-scroll doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
 
+    
     <form name="contact" method="POST" @submit.prevent="submitForm" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <p class="hidden">
         <label>Don't fill this out if you're human:
@@ -52,14 +53,14 @@
             type="email" placeholder="emailを入力して下さい" 
             >
          </div>
-         <div class="form-group">
+         <!-- <div class="form-group">
             <label>メールアドレス(確認用)</label>
             <input 
             v-model="form.repeatEmail"
             class="form-control" 
             type="email" placeholder="emailを入力して下さい" 
             >
-         </div>
+         </div> -->
       </section>
 
       <section v-if="step == 4">
