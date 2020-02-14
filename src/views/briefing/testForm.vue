@@ -35,7 +35,7 @@
                   
                <div class="form-group col-md-6">
                   <label>名</label>
-                  <input v-model="form.lastName" 
+                  <input v-model="form.lastname" 
                   class="form-control" 
                   type="text" 
                   placeholder="名を入力して下さい"
