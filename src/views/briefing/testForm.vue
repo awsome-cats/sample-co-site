@@ -8,86 +8,108 @@
          @submit.prevent="sendForm"
       >
       
-      <span 
-      v-for="e in errors" 
-      :key="e"
-      class="text-danger"
-      >{{e}}</span>
+         <span 
+         v-for="e in errors" 
+         :key="e"
+         class="text-danger"
+         >{{e}}</span>
+         
+         <p class="hidden" style="display:none;">
+         <label>Don't fill this out if you're human:
+            <input name="bot-field"/>
+         </label>
+         </p>
       
-      <p class="hidden" style="display:none;">
-        <label>Don't fill this out if you're human:
-          <input name="bot-field"/>
-        </label>
-      </p>
-      
-      <section 
-         v-if="step == 1"
-         class="form-row"
-         >
-         <div class="text-center step">
-            <h3>Step1</h3>
-         </div>
-         <div class="form-group col-md-12">
-            <label>お名前</label>
-            <input 
-            v-model="form.name" 
-            type="text" 
-            name="name" 
-            id="name" 
-            placeholder="name..."
-            class="form-control"
+         <section 
+            v-if="step == 1"
+            class="form-row"
             >
-         </div>
-         <!----  step1 Ghost  Start---->
-         <div class="form-group text-center grayscale-step">
-            <div class="text-center">
+            <div class="text-center step">
+               <h3>Step1</h3>
+            </div>
+            <div class="form-group col-md-12">
+               <label>お名前</label>
+               <input 
+               v-model="form.name" 
+               type="text" 
+               name="name" 
+               id="name" 
+               placeholder="name..."
+               class="form-control"
+               >
+            </div>
+            <!----  step1 Ghost  Start---->
+            <div class="form-group text-center grayscale-step">
+               <div class="text-center">
+                  <h3 >Step2</h3>
+               </div>
+               <div class="form-group">
+                  <p style="font-size:1.8rem;">
+                     Emailを入力して下さい
+                  </p>
+               </div>
+            </div>
+         </section>
+            <!----  step1 Ghost  End---->
+      
+         <section v-if="step == 2">
+            <div class="text-center step">
                <h3 >Step2</h3>
             </div>
-            <div class="form-group">
-               <p style="font-size:1.8rem;">Emailを入力して下さい</p>
-            </div>
-         </div>
-      </section>
-         <!----  step1 Ghost  End---->
-      
-      <section v-if="step == 2">
-         <div class="text-center step">
-            <h3 >Step2</h3>
-         </div>
-          <input 
-          v-model="form.email" 
-          type="email" name="email" 
-          id="email" 
-          placeholder="email address..."
-          class="form-control"
-          >
-      </section>
+            <input 
+            v-model="form.email" 
+            type="email" name="email" 
+            id="email" 
+            placeholder="email address..."
+            class="form-control"
+            >
+         </section>
 
-      <section v-if="step == 3">
-          <h3>Step3</h3>
-          <textarea v-model="form.message" name="message" id="" cols="30" rows="10" placeholder="message..."></textarea>
-      </section>
-      
-      <button 
-      v-if="step != totalsteps"
-      @click.prevent="nextStep"
-      >
-      次へ
-      </button>
-      <button 
-      v-if="step != 1 "
-      @click.prevent="prevStep"
-      >
-      一つ戻る
-      </button>
-      <input 
-      v-if="step == 3"
-      type="submit"
-      >
+         <section 
+         v-if="step == 3"
+         >
+            <div class="text-center step">
+               <h3 >Step4</h3>
+            </div>
+            <textarea 
+            v-model="form.message" 
+            name="message" id="message" 
+            cols="30" rows="10" 
+            placeholder="message..."
+            class="form-control" 
+            >
+            </textarea>
+         </section>
+
+         <div class="text-center">
+            <button
+            v-if="step != totalsteps"
+            @click.prevent="nextStep"
+            class="btn btn-primary mb-3 mt-3 w-50"
+            >
+            次へ
+            </button>
+         </div>
+
+         <div class="text-center">
+            <button 
+            v-if="step != 1 "
+            @click.prevent="prevStep"
+            class="btn btn-primary mb3 w-50"
+            >
+            一つ戻る
+            </button>
+         </div>
+
+         <div class="text-center">
+            <input 
+            v-if="step == 3"
+            type="submit"
+            class="btn btn-success w-50"
+            >
+         </div>
       </form>
      </div>
-      
-      
    </div>
 </template>
 

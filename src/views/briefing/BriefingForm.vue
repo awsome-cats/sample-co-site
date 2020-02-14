@@ -96,7 +96,9 @@
                <textarea 
                v-model="form.message"
                class="form-control" 
-               type="message" placeholder="メッセージを入力して下さい">
+               type="message" 
+               placeholder="メッセージを入力して下さい"
+               >
                </textarea>
             </div>
             </section>
