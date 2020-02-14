@@ -22,25 +22,25 @@
       
          <section v-if="step == 1">
             <div class="form-row">
-               <div class="text-center">
+               <div class="text-center step-title">
                   <h3>Step1</h3>
                </div>
                <div class="form-group col-md-6">
                   <label>姓</label>
-                  <input v-model="form.name" 
+                  <input v-model="form.firstname" 
                   class="form-control" 
                   type="text" 
                   placeholder="姓を入力して下さい" >
                </div>
                   
-               <!-- <div class="form-group col-md-6">
+               <div class="form-group col-md-6">
                   <label>名</label>
                   <input v-model="form.lastName" 
                   class="form-control" 
                   type="text" 
                   placeholder="名を入力して下さい"
                   >
-               </div> -->
+               </div>
             </div>
             
             <!----  step1 Ghost  Start---->
@@ -185,7 +185,8 @@ export default {
          totalsteps:4,
          errors: [],
          form: {
-            name:'',
+            firstname:'',
+            lastname: '',
             age: 0,
             email: '',
             message: ''
@@ -195,7 +196,7 @@ export default {
    methods: {
       nextStep() {
          if (this.step == 1) {
-            if(!this.form.name) {
+            if(!this.form.firstname && !this.form.lastname) {
                this.errors = '名前を入力してください .'
                return false
             } 
