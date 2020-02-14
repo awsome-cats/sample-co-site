@@ -1,9 +1,11 @@
 <template>
-  <div>
-      <h2>Form</h2>
-      <form name="contact" method="POST" data-netlify="true" 
-      netlify-honeypot="bot-field"
-      @submit.prevent="sendForm"
+  <div class="card container">
+     <div class="card-body">
+        <form name="contact"
+         method="POST" 
+         data-netlify="true" 
+         netlify-honeypot="bot-field"
+         @submit.prevent="sendForm"
       >
       
       <span v-for="e in errors" :key="e">{{e}}</span>
@@ -44,6 +46,8 @@
       type="submit"
       >
       </form>
+     </div>
+      
       
    </div>
 </template>
