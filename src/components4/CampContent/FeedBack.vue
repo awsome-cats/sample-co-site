@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 /* feedback section*/
 .feed-back {
@@ -43,8 +43,9 @@ export default {
 .wrapp {
    border:1px solid #ccc;
    background:#fff;
-   height:100%;
+   height:auto;
    width:100%;
+   
 }
 
 .wrapp h2 {
@@ -52,11 +53,13 @@ export default {
    width:80%;
    margin:15px;
    font-size:1.3rem;
+   
 }
 
 .wrapp p {
    margin:10px;
    text-align: start;
+   
 }
 
 .wrapp button {
@@ -78,11 +81,22 @@ export default {
    height:500px;
    margin:15px;
    background:cyan;
+   
 
 }
 
 .feed-back img {
-   width:339px;
+   width:100%;
+}
+
+@media screen and (max-width:500px) {
+   .feed-back-list {
+      width:450px;
+      height:auto;
+      .wrapp button{
+         margin-bottom:15px;
+      }
+   }
 }
 
 </style>

@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 section {
   margin-bottom: 50px;
@@ -40,6 +40,25 @@ h2 {
    text-align: center;
    font-size:2rem;
    margin-top:60px;
+}
+
+@media screen and (max-width:500px) {
+   div {
+      h2 {
+         text-align: center;
+      }
+       p {
+         
+         margin: 10px 20px;
+      }
+   }
+   .media-info {
+      width:90%;
+      margin:0 auto;
+      height:auto;
+      
+   }
+
 }
 
 </style>

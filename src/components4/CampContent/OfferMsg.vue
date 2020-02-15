@@ -476,7 +476,7 @@ export default {
    }
    h3 {
       margin:20px;
-      font-size:1.7rem;
+      font-size:1.5rem;
       color:rgb(153, 150, 150);
    }
 }
