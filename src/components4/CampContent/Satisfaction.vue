@@ -1,6 +1,6 @@
 <template>
-   <div>
-      <div>
+   <section>
+      <div class="satisfaction-title">
          <h2>日本最高クラスの実績</h2>
       </div>
       <div class="level-of-satisfaction">
@@ -13,7 +13,7 @@
             <p>10,000<span>人</span></p>
          </div>
       </div>
-   </div>
+   </section>
    
 </template>
 
@@ -23,19 +23,28 @@ export default {
 }
 </script>
 
-<style scoped>
-h2,
+<style lang="scss" scoped>
+
+section  {
+   margin-top:20px;
+   border-top:1px solid #ccc;
+}
+
+.satisfaction-title h2,
 .level-of-satisfaction {
    margin:30px;
 }
 
-h2 {
+.satisfaction-title h2 {
    font-size:2rem;
 }
 
 .level-of-satisfaction {
-   display:flex;
-   justify-content: space-between;
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+   gap: 20px;
+   
 }
 
 .level,
@@ -45,7 +54,7 @@ h2 {
    box-shadow:3px 3px 7px 5px rgb(226, 226, 226);
 }
 
-.level h2,
+.level .satisfaction-title h2,
 .count-students h2 {
    font-size:2rem;
    text-align: center;
@@ -61,8 +70,26 @@ h2 {
 
 .level,
 .count-students {
-   width:650px;
-   height:240px;
+   width:100%;
+   height:auto;
+}
+
+@media screen and (max-width:500px) {
+   .satisfaction-title h2{
+      text-align: center;
+      margin-bottom:35px;
+   }
+   .level-of-satisfaction {
+      display:flex;
+      flex-direction: column;
+      align-content: center;
+      align-items:center;
+      .level,
+      .count-students {
+         margin:10px;
+         
+      }
+   }
 }
 
 </style>

@@ -16,6 +16,7 @@ import Training from './components4/ Training.vue'
 import MainBrifing from './views/briefing/MainBriefing.vue'
 import SubmissionSuccess from '@/views/briefing/SubmissionSuccess'
 import SubmissionFail from '@/views/briefing/SubmissionFail'
+import QuestionAnswer from '@/components4/QuestionAnswer'
 
 
 
@@ -96,6 +97,11 @@ export default new Router({
     path: '/fail',
     name:'SubmissionFail',
     component:SubmissionFail
+  },
+  {
+    path:'/questions',
+    name:'QuestionAnswer',
+    component:QuestionAnswer
   }
 
    ]

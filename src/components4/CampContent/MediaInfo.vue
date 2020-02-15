@@ -56,7 +56,6 @@ h2 {
       width:90%;
       margin:0 auto;
       height:auto;
-      
    }
 
 }
