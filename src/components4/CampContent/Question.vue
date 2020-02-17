@@ -15,7 +15,6 @@
                <li>その他</li>
             </ul>
          </router-link>
-         
       </div>
    </div>
 </template>
@@ -53,13 +52,13 @@ export default {
       }
       .question-list {
          display:flex;
-         justify-content: space-between;
+         justify-content: center;
          flex-wrap: wrap;
          list-style: none;
          height:100%;
          li {
-            width:350px;
-            height:60px;
+            width:50%;
+            height:auto;
             background:#fff;
             border:1px solid #ccc;
             margin:20px;
@@ -73,16 +72,37 @@ export default {
 }
 
 // Media Query 500px
-@media screen and (max-width:500px) {
+// @media screen and (max-width:500px) {
+//    .question-section {
+//      h2 {
+//         text-align: center;
+//      }
+//      .question .question-list{
+//         width:100%;
+//         justify-content: center;
+//         text-align: center;
+//      }
+//    }
+// }
+
+// Media Query 768px
+@media screen and (max-width:768px) {
    .question-section {
-     h2 {
-        text-align: center;
-     }
-     .question .question-list{
-        width:100%;
-        justify-content: center;
-        text-align: center;
-     }
+       .question {
+          a {
+             ul.question-list {
+               display: grid;
+               margin:0;
+               grid-template-columns: 1fr 1fr;
+               grid-template-rows: 1fr;
+               justify-content: center;
+               li {
+                  width:300px;
+                  margin:20px auto;
+               }
+             }
+          }
+       }
    }
 }
 
