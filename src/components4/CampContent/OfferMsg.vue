@@ -12,8 +12,8 @@
             <div class="skill" v-for="i in campvalue" :key="i.id">
                <img :src="i.svg" alt="スキル画像">
             </div>
-           
          </div>
+         
          <!----価値提供後の未来---->
          <!--CardOne--->
          <section class="offer-section">
@@ -146,16 +146,6 @@ export default {
    box-sizing: border-box;
 }
 
-.offer {
-   background:#fff;
-   margin-top:60px;
-}
-
-.offer-container {
-   width:100%;
-   height:auto;
-}
-
 .offer-container h2,
 .offer-merit h2,
 .learning-content-headline h2,
@@ -163,7 +153,6 @@ export default {
 .personal-menter-title h2 {
    font-size:2rem;
    width:100%;
-   /* background:cornflowerblue; */
    padding-left:25px;
 }
 
@@ -177,99 +166,271 @@ export default {
    width:100%;
 }
 
-
-.offer-container p {
-   font-size:1rem;
-   /* padding-left:20px; */
-   padding-top:30px;
-   margin-bottom:30px;
-   width:95%;
-}
-
-.skill-image{
-   display:flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   align-content: center;
-   padding:0;
-   margin-bottom:50px;
-}
-
-.skill-image  img {
-   margin:5px;
-   width:240px;
-   opacity:.3;
-   border-radius: 15px;
-}
-
-/* Offer Section */
-/* One */
-
-.offer-section {
+.offer {
    width:100%;
-}
-.offer-merit {
-    margin-top:30px;
-}
-
-.offer-merit-card-one {
-   display:grid;
-   grid-template-rows: 1fr;
-   grid-template-columns: 1fr 1fr;
-   width:90%;
-   border:1px solid #ccc;
-   height:100%;
-   margin:0 auto;
-   margin-bottom:30px;
-   padding:15px;
-   box-shadow:3px 3px 7px 5px rgb(226, 226, 226);
-}
-
-.offer-card-title {
-   grid-column: 1/2;
-   grid-row:1/2;
-}
-
-.offer-card-title h3 {
-   font-size:1.6rem;
-   padding-bottom:40px;
-   padding-top:60px;
-}
-
-.offer-merit h2 {
-   font-size: 2rem;
-}
-
-.offer-merit-image {
-   grid-column: 2/3;
-   grid-row: 1/2;
-   margin:10px;
-}
-
-// offer section media query
-@media screen and (max-width: 500px) {
-   .offer-merit-card-one {
-      display:grid;
-      grid-template-columns: 1fr;
-      grid-template-rows:1fr 1fr;
-      .offer-card-title {
-         grid-column:1/2;
-         grid-row:1/2;
-         h3 {
-            padding-top:20px;
-            font-size:1.6rem;
-            font-weight:500;
-         }
-         p {
-            padding-top:0px;
+   height:auto;
+   background:#fff;
+   margin-top:60px;
+   .offer-container {
+      width:100%;
+      height:auto;
+     
+      h2 {
+         font-weight:600;
+      }
+      p {
+         font-size:1rem;
+         padding-top:30px;
+         margin-bottom:30px;
+         width:95%;
+      }
+      .skill-image{
+         display:flex;
+         justify-content: space-around;
+         flex-wrap: wrap;
+         align-content: center;
+         padding:0;
+         margin-bottom:50px;
+         img {
+            margin:5px;
+            width:240px;
+            opacity:.3;
+            border-radius: 15px;
          }
       }
-      .offer-merit-image {
-         grid-column: 1/2;
-         grid-row:2/3;
+      // offer-section
+      .offer-section {
+         width:100%;
+         height:auto;
+         padding:15px;
+         .offer-merit {
+           
+            margin-top:30px;
+            h2 {
+               font-size: 1.6rem;
+            }
+         }
+         .offer-merit-card-one {
+            display:grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            width:100%;
+            border:1px solid #ccc;
+            height:auto;
+            margin:0 auto;
+            margin-bottom:30px;
+            padding:15px;
+            box-shadow:3px 3px 7px 5px rgb(226, 226, 226);
+            .offer-card-title {
+               grid-column: 1/2;
+               grid-row:1/2;
+               h3 {
+                  font-size:1.6rem;
+                  padding-bottom:40px;
+                  padding-top:60px;
+               }
+            }
+            .offer-merit-image {
+               grid-column: 2/3;
+               grid-row: 1/2;
+               margin:10px;
+            }
+         }
       }
    }
 }
+
+
+
+
+@media screen and (max-width:414px) {
+   .offer {
+      width:100%;
+      height:auto;
+      .offer-container {
+         width:100%;
+         height:auto;
+         section.learning-line-up {
+            .learning-content-headlinen {
+              
+            }
+         }
+      }
+   }
+   
+}
+
+@media screen and (max-width:768px) {
+   .offer {
+      width:100%;
+      height:auto;
+      .offer-container {
+         width:100%;
+         height:auto;
+         h2 {
+            line-height: 160%;
+         }
+         p {
+            line-height: 160%;
+            font-weight: 580;
+         }
+         .skill-image {
+            margin:10px;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            img {
+               margin:8px;
+            }
+         }
+         // offer-section
+         section.offer-section {
+            width:100%;
+            height:auto;
+            .offer-merit {
+               width:100%;
+               h2 {
+                  font-size: 1.7rem;
+                  font-weight: 600;
+               }
+               p {
+                  font-size: 1.2rem;
+               }
+            }
+            .offer-merit-card-one {
+               width:97%;
+               margin:0 auto;
+               margin-bottom:30px;
+               height:auto;
+               display:flex;
+               flex-direction: column;
+               
+                  .offer-card-title {
+                     width:100%;
+                     h3 {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        max-width:500px;
+                        width:100%;
+                        // margin:0 auto;
+                        padding-top:10px;
+                     }
+                     p {
+                        padding:10px 10px;
+                        margin:0 auto;
+                        width:100%;
+                        height:auto;
+                     }
+                  }
+                  .offer-merit-image {
+                     padding:14px 0px 0px 0px;
+                     
+                     margin:0;
+                     width:100%;
+                     height:auto;
+                     img {
+                        width:100%;
+                        height:auto;
+                        margin:0 auto;
+                     }
+                  }
+               }
+         }
+
+         // learning-section
+         section.learning-line-up {
+            border-top:1px solid #ccc;
+            margin-top:10px;
+            padding-top:20px;
+            .learning-content-headline {
+               h2 {
+                  font-size: 1.7rem;
+                  font-weight: 600;
+               }
+               p {
+                  line-height: 170%;
+               }
+            }
+            .learning-content-title {
+               h3 {
+                  font-size: 1.6rem;
+                  font-weight: 600;
+               }
+               p {
+                  font-size: 1.3rem;
+                  line-height: 160%;
+               }
+            }
+            .learning-content {
+               width:100%;
+               height:auto;
+               margin:0;
+               display: flex;
+               flex-direction: column;
+               div {
+                  border:2px solid #ddd;
+                  border-radius: 8px;
+                  width:100%;
+                  height:100%;
+                  position:relative;
+                  padding-bottom: 20px;
+                   span {
+                     left:50%;
+                     top:100%;
+                     transform: translate(-50%, -100%);
+                     font-weight: 500;
+                   }
+               }
+            }
+         }
+
+         // personal section
+         section.personal-menter {
+            margin-top:35px;
+            margin-bottom:40px;
+         }
+         // support section
+         section.support {
+            width:100%;
+            height:auto;
+            .teaching-material {
+               grid-template-columns: 1fr;
+               grid-template-rows: 1fr 1fr;
+               width:97%;
+               margin-top:10px;
+               height:auto;
+               div {
+                  grid-column: 1/2;
+                  grid-row: 1/2;
+                  margin-top:5px;
+                  width:100%;
+                  height:auto;
+                  h3 {
+                     font-weight: 600;
+                     font-size: 1.6rem;
+                     text-align: center;
+                    
+                  }
+                  p {
+                      margin:0 auto;
+                  }
+               }
+               img {
+                  grid-row: 2/3;
+                  grid-column: 1/2;
+                  width:100%;
+                  height:auto;
+                  margin-bottom:10px;
+                  padding:0;
+                 
+               }
+            }
+         }
+      }
+   }
+   
+}
+
 
 
 /* Learnnig Content */
@@ -322,20 +483,11 @@ export default {
    padding:0;
 }
 
-// learning media query
-@media screen and (max-width:500px) {
-   .learning-content {
-      max-width:500px;
-      background:darkgoldenrod;
-      img {
-         max-width:120px;
-      }
-   }
-}
 
 /* 価値のサポート */
 .personal-menter {
    width:100%;
+   height:100%;
    box-sizing: border-box;
    // background:chartreuse;
    margin-bottom:100px;
@@ -360,6 +512,7 @@ export default {
 
 .personal-menter .menter-img {
    background-image:url('../../assets/svg/svg-camp-learn02.svg');
+   
    height:400px;
    width:100%;
    background-size:cover;
@@ -434,7 +587,7 @@ export default {
    padding:15px;
    width:100%;
    height:auto;
-   max-height:350px;
+   max-height:400px;
 }
 
 
