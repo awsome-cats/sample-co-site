@@ -65,8 +65,11 @@
          <section class="support">
             <h2>人生を変える最高の環境</h2>
             <div class="teaching-material" v-for="i in campsupport" :key="i.id">
-               <img :src="i.svgTextSvg" alt="サポート体制の画像">
-               <div>
+               <div class="support-img">
+                  <img :src="i.svgTextSvg" alt="サポート体制の画像">
+               </div>
+               
+               <div class="support-title">
                   <h3>{{i.title}}</h3>
                   <p>{{i.description}}</p>
                </div>
@@ -389,42 +392,66 @@ export default {
             margin-top:35px;
             margin-bottom:40px;
          }
+         
+         
          // support section
          section.support {
             width:100%;
-            height:auto;
+            height:100%;
+            h2 {
+               margin-bottom:10px;
+            }
             .teaching-material {
                grid-template-columns: 1fr;
-               grid-template-rows: 1fr 1fr;
+               grid-template-rows: 1fr 250px;
+               justify-content: center;
                width:97%;
-               margin-top:10px;
-               height:auto;
-               div {
+              
+               margin:40px auto;
+               .support-title {
                   grid-column: 1/2;
-                  grid-row: 1/2;
-                  margin-top:5px;
+                  grid-row: 2/3;
                   width:100%;
-                  height:auto;
+                  height:100%;
+                  margin-top:0;
+                  padding:0;
+                  // display:flex;
+                  // flex-direction: column;
+                  // justify-content: center;
+                  margin:10px 10px;
+                  
                   h3 {
+                     
                      font-weight: 600;
                      font-size: 1.6rem;
-                     text-align: center;
-                    
+                     // text-align: center;
+                     margin:0;
+                     padding-bottom:40px;
+                     
                   }
                   p {
-                      margin:0 auto;
+                      margin:0;
+                      padding:0;
+                      margin-top:20px;
                   }
                }
-               img {
-                  grid-row: 2/3;
+               .support-img  {
+                  grid-row: 1/2;
                   grid-column: 1/2;
-                  width:100%;
-                  height:auto;
                   margin-bottom:10px;
                   padding:0;
-                 
+                  margin:10px;
+                  img {
+                    width:100%;
+                  }
                }
             }
+         }
+
+         // feedback section 
+         section.feedback {
+           width:100%;
+           height:auto;
          }
       }
    }
@@ -535,69 +562,65 @@ export default {
 /* support section*/
 .support {
    width:100%;
-   height:auto;
+   
    margin:0 auto;
    h2 {
       margin-bottom:30px;
+   }
+   .teaching-material {
+      /* margin-bottom:50px; */
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      border:1px solid #ccc;
+      box-shadow:3px 3px 7px 5px rgb(240,239, 239);
+      width:90%;
+      height:100%;
+      margin:0 auto;
+      margin-bottom:40px;
+      background:#fff;
+      .support-img {
+         grid-row:1/2;
+         grid-column:1/2;
+         align-items: center;
+         padding:15px;
+         height:auto;
+         // max-height: 500px;
+      }
+      .support-title{
+         width:100%;
+         height:100%;
+         grid-column: 2/3;
+         grid-row:1/2;
+         h3{
+            font-size:1.6rem;
+            margin:20px;
+         }
+         p{
+            font-size:1rem;
+            padding:10px 20px;
+         }
+      }
+
    }
 }
 
 
 
-.teaching-material
-{
-   /* margin-bottom:50px; */
-   display:grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
-   border:1px solid #ccc;
-   box-shadow:3px 3px 7px 5px rgb(240, 239, 239);
-   width:90%;
-   height:100%;
-   margin:0 auto;
-   margin-bottom:40px;
-   background:#fff;
-}
-
-.teaching-material h3{
-   font-size:1.6rem;
-   margin:20px;
-}
-
-.teaching-material p
-
- {
-   font-size:1rem;
-   padding:10px 20px;
-  
-}
-
-.teaching-material div
-{
-    width:90%;
-    grid-column: 2/3;
-    grid-row:1/2;
-    
-}
-
-.teaching-material img {
-   padding:15px;
-   width:100%;
-   height:auto;
-   max-height:400px;
-}
 
 
-.dev-support img,
-.support-menter img  {
-  height:450px;
-  padding-bottom:15px;
-  padding-top:15px;
-  
-}
+
+
+
+
+
+
+
+
+
 
 // support media query
 

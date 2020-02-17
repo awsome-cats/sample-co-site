@@ -1,6 +1,6 @@
 export default[
    {
-      svgTextSvg:require('@/assets/svg/homescreen.svg'),
+      svgTextSvg:require('@/assets/svg/svg-camp-learn01.svg'),
       title:'未経験でも一読してわかる洗練されたオリジナル教材',
       description:'市販の参考書や無料のオンライン動画は、「最新の情報が反映されていない」「改善されていない」などの問題があります。TECH::CAMPでは完全オリジナルの学習教材を使用します。「未経験でも一読して分かる」をコンセプトに5,000回以上の改善を重ねているため、未経験の方でもスムーズに学習が可能です。'
    },
