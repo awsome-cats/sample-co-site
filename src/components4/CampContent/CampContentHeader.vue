@@ -2,10 +2,14 @@
    <header class="header-content">
       <div class="camp-body" @click="toBriefingMain">
          <div class="briefing-box">
-            <img :src="item.campHeaderContent.svgTextImage" alt="プログラミングスクールの説明">
-            <router-link to="/briefing-main">
+            <div>
+               <img :src="item.campHeaderContent.svgTextImage" alt="プログラミングスクールの説明">
+            </div>
+            <div>
+               <router-link to="/briefing-main">
                <p class="briefing-msg" >無料プログラミング体験会へ参加する</p>
             </router-link>
+            </div>
          </div>
          <div class="header-visual-bg">
             <img class="image" :src="item.campHeaderContent.svg" alt="camp画像">
@@ -35,10 +39,8 @@ export default {
       box-sizing: border-box;
    }
    .header-content {
-      
       padding-bottom: 30px;
       padding-top:110px;
-      
       width:100%;
       height:auto;
       max-width:1300px;
@@ -92,27 +94,20 @@ export default {
       padding:10px;
    }
    
-   @media screen and (max-width:500px) {
+   @media screen and (max-width:414px) {
       .header-content {
          padding-top:10px;
          padding-bottom:20px;
+         // max-width: 400px;
+         background:blanchedalmond;
          .briefing-box {
-            padding-top:30px;
+            padding-top:10px;
+          p {
+             font-size:.4rem;
+          }
          }
       }
-      // .header-visual-bg {
-      //    width:100%;
-      // }
-      // .briefing-box {
-      //    width:100%;
-      //    p {
-      //       font-size:.7rem;
-      //       top:-20%;
-      //       left:10%;
-      //       transform: translate(10%, -20%);
-            
-      //    }
-      // }
+      
       
       
    } 
