@@ -19,9 +19,7 @@
                         <img :src="i.svg" alt="">
                         <span>{{i.title}}</span>
                     </a>
-                    
                 </div>
-                
             </div>
         </section>
         <!---Section v-for------>
@@ -49,7 +47,6 @@ export default {
             aboutServiceContents
         }
     }
-    
 }
 </script>
 
@@ -92,9 +89,6 @@ export default {
     }
 }
 
- 
-
- 
 
 section.about-image {
     width:100%;
@@ -129,13 +123,7 @@ section.about-image {
     }
 }
 
-
-
-
-
-
-
-
+// Media Query
 @media screen and (max-width:500px) {
     .about-header-title {
         height:140px;
