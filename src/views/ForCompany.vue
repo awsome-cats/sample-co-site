@@ -223,5 +223,18 @@ a {
 
 /** IPad 対応 END**/
 
+/** Media 414**/
+
+@media screen and (max-width:414px) {
+	.company-card {
+		border:1px solid rgba(179, 178, 178, 0.5);
+      box-shadow:5px 5px 15px 5px rgb(245, 245, 245);;
+		.description p {
+			font-weight: 600;
+		}
+	}
+	
+}
+
 
 </style>
