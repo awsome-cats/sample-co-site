@@ -2,9 +2,15 @@
    <div>
       <div class="briefing-page-head">
          <div class="briefing-title">
-             <h2>プロのカウンセラーがあなたの悩みを解決</h2>
-             <p>最高のプログラミング学習を<br>体験しませんか？</p>
-             <p>過去10,000<span>人</span>が参加しています。</p>
+            <div>
+               <h2>プロのカウンセラーがあなたの悩みを解決</h2>
+            </div>
+            <div>
+               <p>最高のプログラミング学習を<br>体験しませんか？</p>
+            </div>
+             <div>
+                <p>過去10,000<span>人</span>が参加しています。</p>
+             </div>
          </div>
          <div class="briefing-img"></div>
       </div>
@@ -45,51 +51,54 @@ export default {
          briefingFlow
       }
    }
-   
 }
 </script>
 
 <style lang="scss" scoped>
    .briefing-page-head {
-     
       width:100%;
-      height:100%;
+      height:auto;
+      margin-top:100px;
+      margin-bottom:30px;
       display:flex;
       .briefing-title {
          width:50%;
+         height:100%;
+         margin-left:10px;
          h2 {
             background:red;
             color:#fff;
             font-size:2rem;
             font-weight:600;
-            margin:10px;
+            
             text-align: center;
             margin-top:50px;
-            padding:20px;
+            padding-bottom:20px;
+           
          }
          p:first-of-type {
             font-size:1.8rem;
-            color:#fff;
+            color:black;
             font-weight: 300;
-            // margin:10px;
-            text-align: center;
-            // padding:40px;
+            margin-top:60px;
+            margin-left:20px;
+            font-weight: 600;
             width:80%;
-            // text-indent:-1em;
-            // margin:left;
          }
          p {
             font-size:2rem;
-            text-align: center;
+            margin-top:60px;
+            margin-left:20px;
+            font-weight: 400;
          }
       }
       .briefing-img {
          width:50%;
-         height:500px;
+         height:auto;
          background-image:url('../../assets/svg/briefing-top.svg');
          background-size:cover;
          background-position:center;
-
+         margin:10px;
       }
 
    }
@@ -98,7 +107,6 @@ export default {
       margin:0 auto;
       display:flex;
       justify-content: center;
-      
       max-width:980px;
       .briefing-img-section {
          width:100%;
@@ -127,4 +135,92 @@ export default {
          }
       }
    }
+
+
+// Media Query 768px
+@media screen and (max-width:768px) {
+   .briefing-page-head {
+      margin-top:100px;
+      margin-bottom:30px;
+      background:rgb(243, 243, 243);
+      .briefing-title {
+         h2 {
+            font-size:1.3rem;
+            margin:10px;
+         }
+         p:first-of-type {
+            font-size: 1.3rem;
+            margin-left:10px;
+         }
+         p:last-of-type {
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding:0;
+            margin-left:10px;
+         }
+      }
+   }
+   .briefing-page-flow 
+   .briefing-img-section
+   .briefing-img {
+      .title {
+         p:first-of-type {
+            font-size: 1rem;
+            font-weight: 600;
+         }
+         p:last-of-type {
+            font-size: .7rem;
+            font-weight: 530;
+         }
+      }
+   }
+}
+
+
+//Media Query 414px 
+
+@media screen and (max-width:414px) {
+   .briefing-page-head {
+      flex-direction: column;
+      margin-top:50px;
+      margin-bottom:30px;
+      background:rgb(243, 243, 243);
+      .briefing-title {
+         width:100%;
+         h2 {
+            font-size:1rem;
+            margin:10px;
+         }
+         p:first-of-type {
+            font-size: 1.3rem;
+            margin-left:10px;
+         }
+         p:last-of-type {
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding:0;
+            margin-left:10px;
+         }
+      }
+   }
+   .briefing-page-flow 
+   .briefing-img-section
+   .briefing-img {
+      width:100%;
+      height:auto;
+      .title {
+         p:first-of-type {
+            font-size: 1rem;
+            font-weight: 600;
+         }
+         p:last-of-type {
+            font-size: .7rem;
+            font-weight: 530;
+         }
+      }
+   }
+}
+
+
+
 </style>

@@ -253,11 +253,7 @@ export default {
       .offer-container {
          width:100%;
          height:auto;
-         section.learning-line-up {
-            .learning-content-headlinen {
-              
-            }
-         }
+         
       }
    }
    

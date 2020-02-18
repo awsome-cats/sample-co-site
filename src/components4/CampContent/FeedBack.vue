@@ -99,4 +99,14 @@ export default {
    }
 }
 
+@media screen and (max-width:414px) {
+   .feed-back-list {
+      width:100%;
+      height:auto;
+      .wrapp button{
+         margin-bottom:15px;
+      }
+   }
+}
+
 </style>

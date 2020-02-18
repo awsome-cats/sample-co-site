@@ -13,7 +13,7 @@
 
 <script>
 export default {
-   name:'Question Answer'
+   name:'Contact'
 }
 </script>
 

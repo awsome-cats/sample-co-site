@@ -7,7 +7,6 @@
          netlify-honeypot="bot-field"
          @submit.prevent="sendForm"
       >
-      
          <span 
          v-for="e in errors" 
          :key="e"
@@ -84,7 +83,7 @@
                   <h3 >Step3</h3>
                </div>
                <div class="form-group">
-                  <p style="font-size:1.8rem;">
+                  <p class="label" style="font-size:1.8rem;">
                      Emailを入力して下さい
                   </p>
                </div>
@@ -93,7 +92,7 @@
                   <h3 >Step4</h3>
                </div>
                <div class="form-group">
-                  <p style="font-size:1.8rem;">
+                  <p class="label" style="font-size:1.8rem;">
                      メッセージを入力して下さい
                   </p>
                </div>
@@ -251,10 +250,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .card {
    border: 3px solid #ccc;
+   margin-bottom:100px;
 }
 .step-title {
    width:100%;
@@ -267,6 +267,18 @@ export default {
    height:150px;
    color:rgb(156, 153, 153);
    margin:0 auto;
+}
+
+@media screen and (max-width:414px) {
+   
+   .grayscale-step {
+      width:200px;
+      height:auto;
+      h3 {
+         font-size: 1.5rem;
+      }
+   }
+   
 }
 
 </style>
