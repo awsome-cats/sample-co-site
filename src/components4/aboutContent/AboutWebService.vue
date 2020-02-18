@@ -55,45 +55,50 @@ export default {
 
 section.service-content-wrapp {
    max-width:980px;
+   width:100%;
    height:100%;
    margin:0 auto;
    margin-top:30px;
    .service-head {
-      margin:50px;
+      margin:20px;
       background:rgb(255, 250, 244);
       border:1px solid #ccc;
       box-shadow:4px 3px 10px -2px #ccc;
       .service-title-section {
          display:flex;
-         height:70px;
+         height:100%;
          width:100%;
          background:rgb(80, 80, 80);
          .service-title {
             color:black;
             width:90%;
-            height:50%;
+            height:100%;
             h2 {
                font-size: 1.6rem;
                color:#fff;
-               padding:7px;
+               padding-top:7px;
+               padding-left:7px;
+               height:100%;
             }
 
          }
          .service-sub-title {
             color:#fff;
             width:50%;
-            height:60px;
+            height:100%;
             p {
-               height:50%;
+               height:auto;
                float:right;
                font-size:1.5rem;
                color:#fff;
                padding-right:8px;
+               padding-top:7px;
+
             }
          }
       }
    }
-   
+   // ここから
    div.service-content {
       width:100%;
       display:flex;
@@ -126,15 +131,16 @@ section.service-content-wrapp {
    .skill-wrapper {
       width:100%;
       padding-bottom:10px;
-     
+      height:auto;
+      padding:30px;
       .skills-list {
          background:#fff;
          border:1px solid #ccc;
-         width:60%;
-         margin:0 auto;
-         margin-bottom:10px;
+         width:100%;
+         padding:30px;
          border:1px solid #ccc;
          border-radius:2px 2px 10px 10px;
+         margin-bottom:20px;
       h4 {
          font-size:1.3rem;
          color:black;
@@ -156,74 +162,136 @@ section.service-content-wrapp {
          button {
             background:rgb(252, 92, 19);
             border-radius:20px;
-            width:400px;
+            max-width:400px;
+            width:100%;
             color:#fff;
             padding:10px;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-   border:none;
-   cursor: pointer;
+            border:none;
+            cursor: pointer;
          }
       }
   }
    
 }
 
-//Media Query 414px
+//Media Query 375px
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:375px) {
    .service-content-wrapp {
       width:100%;
-      background:cyan;
       height:auto;
+      box-shadow:5px 5px 15px 2px rgb(243, 243, 243);
       .service-head {
-         margin:5px;
          background:darkcyan;
          height:auto;
+         max-width:375px;
+         
+         // Title
          .service-title-section {
-           // display
-           
+            flex-direction: column;
+            align-items: center;
             .service-title {
-               background:darkgreen;
-               
+               text-align: center;
+               padding-top:7px;
+               padding-bottom:7px;
+               width:100%;
             }
             .service-sub-title {
-               background:darkgrey;
+               padding-top:7px;
+               width:100%;
+               height:auto;
                p {
-                  font-size: 1rem;
+                  width:100%;
+                  height:auto;
+                  text-align: center;
                }
             }
          }
-         .service-content {
+         // ここから
+         // Content
+         div.service-content {
             display:flex;
             flex-direction: column;
+            justify-content: center;
             margin:0;
-            width:100%;
             img {
-               height:150px;
+               height:auto;
+               width:100%;
                margin:0;
-               padding:10px;
+               padding:20px;
             }
             .service-user-recommend {
+               display:flex;
+               flex-direction: column;
+               align-items: center;
+               margin:0 auto;
                h3 {
                   margin:0 auto;
-                  
+                  font-size: 1.4rem;
                }
                ul {
-
+                 width:90%;
+                 padding:0px 10px;
                }
                li {
-
+                  font-size: 1rem;
+                  list-style:square;
+                  width:90%;
+                  margin:0 auto;
+                  
                }
             }
          }
          
          
          .skill-wrapper {
+            margin:0;
+            padding:10px;
+            .skills-list {
+               width:100%;
+               h4 {
+                  font-weight: 400;
+                  font-size: 1.4rem;
+               }
+               ul {
+                  width:100%;
+                  margin-bottom:0px;
+                  margin-left:0px;
+                  
+                  li {
+                     line-height: 30px;
+                  }
+               }
+            }
+
             .button {
-               background-color:black;
                button {
                   width:100%;
                   height:auto;
+               }
+            }
+         }
+      }
+   }
+}
+
+// Media Query 768px 
+
+@media screen and (max-width:768px){
+   section.service-content-wrapp {
+      .service-head {
+         .skill-wrapper {
+            .skills-list {
+              
+               height:auto;
+               ul {
+                  line-height: 160%;
+                  height:100%;
+                  //background:darkmagenta;
+                  li {
+                      font-size:1rem;
+                  }
                }
             }
          }
