@@ -21,6 +21,7 @@
                      </ul>
                   </div>
               </div>
+              
               <div class="skill-wrapper">
                   <div class="skills-list">
                      <h4>身につくスキル</h4>
@@ -166,6 +167,70 @@ section.service-content-wrapp {
   }
    
 }
+
+//Media Query 414px
+
+@media screen and (max-width:414px) {
+   .service-content-wrapp {
+      width:100%;
+      background:cyan;
+      height:auto;
+      .service-head {
+         margin:5px;
+         background:darkcyan;
+         height:auto;
+         .service-title-section {
+           // display
+           
+            .service-title {
+               background:darkgreen;
+               
+            }
+            .service-sub-title {
+               background:darkgrey;
+               p {
+                  font-size: 1rem;
+               }
+            }
+         }
+         .service-content {
+            display:flex;
+            flex-direction: column;
+            margin:0;
+            width:100%;
+            img {
+               height:150px;
+               margin:0;
+               padding:10px;
+            }
+            .service-user-recommend {
+               h3 {
+                  margin:0 auto;
+                  
+               }
+               ul {
+
+               }
+               li {
+
+               }
+            }
+         }
+         
+         
+         .skill-wrapper {
+            .button {
+               background-color:black;
+               button {
+                  width:100%;
+                  height:auto;
+               }
+            }
+         }
+      }
+   }
+}
+
 
 
 

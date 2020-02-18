@@ -95,21 +95,24 @@ section.about-image {
     background:rgb(233, 232, 232);
     margin-top:10px;
     .about-contents-list {
-        max-width: 980px;
-        // background:chartreuse;
+        width:100%;
+        
+        //background:chartreuse;
         height:auto;
         display:flex;
         justify-content:space-around;
+        align-items: center;
         text-align:center;
         padding:45px;
         margin:0 auto;
         .web-service {
             height:auto;
-            // background:chocolate;
+            //background:chocolate;
             padding:20px;
 
             img {
-                width:180px;
+                width:100%;
+                max-width:180px;
                 display:block;
                 align-items:center;
             }
