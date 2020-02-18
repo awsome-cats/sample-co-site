@@ -268,12 +268,6 @@ export default {
             h2 {
                font-size: 1.3rem;
             }
-            h3 {
-
-            }
-            p {
-
-            }
          }
          
       }
