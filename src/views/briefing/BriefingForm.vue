@@ -146,7 +146,6 @@ export default {
             message:'',
             submitStatus: null
          }
-         
       }
    },
    methods: {

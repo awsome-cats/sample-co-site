@@ -29,7 +29,7 @@
                       <router-link to="/about">学習内容</router-link>
                   </li>
                   <li>
-                      <router-link to="/contact">エントリー</router-link>
+                      <router-link to="/briefing-main">体験会</router-link>
                   </li><li>
                       <router-link to="/camp">Camp</router-link>
                   </li><li>
