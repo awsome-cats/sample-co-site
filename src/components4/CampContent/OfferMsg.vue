@@ -253,8 +253,42 @@ export default {
       .offer-container {
          width:100%;
          height:auto;
-         
+         .support {
+            width:100%;
+            height:auto;
+            .teaching-material {
+               display: flex;
+               flex-direction: column;
+               width:100%;
+               height:auto;
+               .support-img {
+                  width:100%;
+                  height:auto;
+               }
+               .support-title {
+                 
+                  height:auto;
+                  width:100%;
+                  margin:10px;
+                  h3 {
+                     width:90%;
+                     font-size: 4rem;
+                     padding-bottom:0px;
+                     text-align: center;
+                  }
+                  p {
+                     padding-top:0;
+                     margin-top:0;
+                     color:rgb(44, 39, 35);
+                     width:100%;
+                     
+
+                  }
+               }
+            }
+         }
       }
+      
    }
    
 }
@@ -402,7 +436,6 @@ export default {
                grid-template-rows: 1fr 250px;
                justify-content: center;
                width:97%;
-              
                margin:40px auto;
                .support-title {
                   grid-column: 1/2;
@@ -417,13 +450,11 @@ export default {
                   margin:10px 10px;
                   
                   h3 {
-                     
                      font-weight: 600;
                      font-size: 1.6rem;
                      // text-align: center;
                      margin:0;
                      padding-bottom:40px;
-                     
                   }
                   p {
                       margin:0;
@@ -542,18 +573,18 @@ export default {
    background-position:center;
 }
 
-@media screen and (max-width:500px) {
-   .personal-menter {
-      margin-bottom:30px;
-      .personal-menter-title p {
-      font-size: 1.3rem;
-      span {
-         font-size:1.3rem;
-      }
-   }
-   }
+// @media screen and (max-width:500px) {
+//    .personal-menter {
+//       margin-bottom:30px;
+//       .personal-menter-title p {
+//       font-size: 1.3rem;
+//       span {
+//          font-size:1.3rem;
+//       }
+//    }
+//    }
    
-}
+// }
 
 /* support section*/
 .support {
@@ -620,24 +651,24 @@ export default {
 
 // support media query
 
-@media screen and (max-width:500px) {
-   .support h2 {
-      text-align: center;
-      margin-top:0px;
-   }
-   .teaching-material {
-     grid-template-columns: 1fr;
-     grid-template-rows: 1fr 1fr;
-     div {
-        grid-column: 1/2;
-        grid-row: 2/3;
-     }
-     img {
-        grid-row: 1/2;
-        grid-column: 1/2;
-     }
-   } 
-}
+// @media screen and (max-width:500px) {
+//    .support h2 {
+//       text-align: center;
+//       margin-top:0px;
+//    }
+//    .teaching-material {
+//      grid-template-columns: 1fr;
+//      grid-template-rows: 1fr 1fr;
+//      div {
+//         grid-column: 1/2;
+//         grid-row: 2/3;
+//      }
+//      img {
+//         grid-row: 1/2;
+//         grid-column: 1/2;
+//      }
+//    } 
+// }
 
 
 .feedback {

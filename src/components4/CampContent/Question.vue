@@ -61,7 +61,7 @@ export default {
          justify-content: center;
          // flex-wrap: wrap;
          list-style: none;
-         background:chocolate;
+         // background:chocolate;
          height:100%;
          width:100%;
          max-width:700px;

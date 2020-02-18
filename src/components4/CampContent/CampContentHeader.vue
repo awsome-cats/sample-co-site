@@ -99,7 +99,7 @@ export default {
          padding-top:10px;
          padding-bottom:20px;
          // max-width: 400px;
-         background:blanchedalmond;
+         // background:blanchedalmond;
          .briefing-box {
             padding-top:10px;
           p {
