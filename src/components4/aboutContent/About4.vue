@@ -64,9 +64,7 @@ export default {
 .about-header-title h2 {
     font-size:2rem;
     color:#fff;
-    // text-align: center;
     font-weight:200;
-    // height:200px;
 }
 
 .about-header-subtitle {
@@ -85,6 +83,7 @@ export default {
         padding-bottom: 30px;
         font-weight:400;
         width:70%;
+        height:auto;
         margin:0 auto;
     }
 }
@@ -96,8 +95,6 @@ section.about-image {
     margin-top:10px;
     .about-contents-list {
         width:100%;
-        
-        //background:chartreuse;
         height:auto;
         display:flex;
         justify-content:space-around;
@@ -107,7 +104,6 @@ section.about-image {
         margin:0 auto;
         .web-service {
             height:auto;
-            //background:chocolate;
             padding:20px;
 
             img {
@@ -119,60 +115,78 @@ section.about-image {
             span {
                 text-decoration: none;
                 color:black;
-                // background:cornflowerblue;
                 font-weight: 500;
             }
         }
     }
 }
 
-// Media Query
-@media screen and (max-width:500px) {
+// Media Query 414px
+
+@media screen and (max-width:375px) {
     .about-header-title {
+        margin-top: 30px;
+        padding:0;
         height:140px;
-        margin-top: 10px;
+        h2 {
+            font-size: 1rem;
+            font-weight: 400;
+        }
     }
-    .about-header-title h2 {
-        font-size:1.5rem;
+    section.about-image {
+        height:auto;
+        .about-contents-list {
+            .web-service {
+                height:100%;
+                a {
+                    img {
+                        height:auto;
+                    }
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
     }
+
+}
+
+// Media Query 500px
+@media screen and (max-width:768px) {
     .about-image{
         height:auto;
         background:cyan;
         .about-contents-list {
-            // background:cyan;
             height:auto;
             flex-direction: column;
             align-items: center;
-            
             .web-service {
-                
                 background:rgb(248, 247, 247);
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
                 width:100%;
+                height:100%;
                 margin:10px;
                 border-radius: 20px;
                 display: flex;
                 justify-content: center;
                 a img {
                     width:250px;
-                    // background:chartreuse;
                     margin-bottom:25px;
                 }
                 a span {
-                    font-size:1.4rem;
+                    font-size:1.2rem;
                     font-weight: 400;
                     background:rgb(240, 96, 96);
                     border-radius: 9px;
+                   
                     padding:5px;
                     color:#fff;
                     box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.19);
                 }
                
+            }
         }
-        }
-        
-           
-        
     }
 }
 </style>
