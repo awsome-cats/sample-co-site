@@ -5,8 +5,6 @@
      <p>※通常ご連絡下頂いた後二日頂いております。<br>現在、お電話でのお問い合わせ窓口はございません。</p>
    </div>
    <div class="copy"><p>Copyright 2020</p></div>
-   <router-link to="/test-link">test-linkへ</router-link>
-   <router-link to="/test-link/:id">test-linkのidへ</router-link>
   </footer>
 </template>
 

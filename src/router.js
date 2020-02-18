@@ -9,8 +9,8 @@ import CampContent from './components4/CampContent.vue'
 import HigherGraderContent from './components4/HigerGraderContent.vue'
 import JuniorContent from './components4/JuniorContent.vue'
 import HighSchoolContent from './components4/HighSchoolContent.vue'
-import TestLink from './views/TestLink.vue'
-import TestPara from './views/TestPara.vue'
+//import TestLink from './views/TestLink.vue'
+//import TestPara from './views/TestPara.vue'
 import Recruite from './components4/Recruite.vue'
 import Training from './components4/ Training.vue'
 import MainBrifing from './views/briefing/MainBriefing.vue'
@@ -70,19 +70,19 @@ export default new Router({
     name:'Training',
     component:Training
   },
-  {
-    path:'/test-link',
-    name:'TestLink',
-    component:TestLink
-  },
-  {
-    path:'/test-link/:id',
-    name:'TestPara',
-    component:TestPara,
-    props: route =>({
-      id:Number(route.params.id)
-    })
-  },
+  // {
+  //   path:'/test-link',
+  //   name:'TestLink',
+  //   component:TestLink
+  // },
+  // {
+  //   path:'/test-link/:id',
+  //   name:'TestPara',
+  //   component:TestPara,
+  //   props: route =>({
+  //     id:Number(route.params.id)
+  //   })
+  // },
   {
     path:'/briefing-main',
     name:'MainBriefing',
