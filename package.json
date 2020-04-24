@@ -8,11 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "acorn": "^6.4.1",
     "aos": "^3.0.0-beta.6",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "core-js": "^3.4.4",
     "file-loader": "^5.0.2",
+    "kind-of": "^6.0.3",
+    "minimist": "^1.2.3",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "vue": "^2.6.10",
